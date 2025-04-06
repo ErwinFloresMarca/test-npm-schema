@@ -1,0 +1,25 @@
+{
+  "name": "schema-proyect",
+  "version": "1.0.0",
+  "description": "Proyecto con múltiples esquemas de Prisma",
+  "main": "index.js",
+  "scripts": {
+    "rrhh:push": "npx prisma db push --schema=./prisma",
+    "rrhh:pull": "npx prisma db pull --schema=./prisma",
+    "rrhh:generate": "npx prisma generate --schema=./prisma",
+    "rrhh:studio": "npx prisma studio --schema=./prisma",
+    "rrhh:migrate": "prisma migrate dev --schema=./prisma",
+    "rrhh:migrate:deploy": "prisma migrate deploy --schema=./prisma",
+    "rrhh:migrate:reset": "prisma migrate reset --schema=./prisma"
+    
+  },
+  "prisma": {
+    "schema": "db/schema.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.5.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.5.0"
+  }
+} 
