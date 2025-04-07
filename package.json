@@ -11,9 +11,9 @@
     "rrhh-migrate": "./scripts/migrate.js",
     "rrhh-migrate-deploy": "./scripts/migrate-deploy.js",
     "rrhh-migrate-reset": "./scripts/migrate-reset.js",
-    "test-db-push": "npm run test:push",
-    "test-db-generate": "npm run test:generate",
-    "test-db-migrate": "npm run test:migrate"
+    "test-db-push": "npm run rrhh:push",
+    "test-db-generate": "npm run rrhh:generate",
+    "test-db-migrate": "npm run rrhh:migrate"
   },
   "author": "",
   "license": "ISC",
@@ -44,10 +44,12 @@
     "rrhh"
   ],
   "peerDependencies": {
-    "@prisma/client": "^6.5.0"
+    "@prisma/client": "^6.5.0",
+    "prisma": "^6.5.0"
   },
   "dependencies": {
-    "@prisma/client": "^6.5.0"
+    "@prisma/client": "^6.5.0",
+    "prisma": "^6.5.0"
   },
   "engines": {
     "node": ">=16.0.0"
