@@ -1,8 +1,29 @@
 {
-  "name": "schema-proyect",
+  "name": "rrhh-db",
   "version": "1.0.0",
   "description": "Proyecto con múltiples esquemas de Prisma",
-  "main": "index.js",
+  "main": "test.js",
+  "bin": {
+    "rrhh-push": "./scripts/push.js",
+    "rrhh-pull": "./scripts/pull.js",
+    "rrhh-generate": "./scripts/generate.js",
+    "rrhh-studio": "./scripts/studio.js",
+    "rrhh-migrate": "./scripts/migrate.js",
+    "rrhh-migrate-deploy": "./scripts/migrate-deploy.js",
+    "rrhh-migrate-reset": "./scripts/migrate-reset.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "prisma/**/*.prisma",
+    "migrations/*",
+    "database.db",
+    "database.db-journal",
+    "package.json",
+    "README.md",
+    "scripts/*.js",
+    "client/*"
+  ],
   "scripts": {
     "rrhh:push": "npx prisma db push --schema=./prisma",
     "rrhh:pull": "npx prisma db pull --schema=./prisma",
@@ -11,15 +32,27 @@
     "rrhh:migrate": "prisma migrate dev --schema=./prisma",
     "rrhh:migrate:deploy": "prisma migrate deploy --schema=./prisma",
     "rrhh:migrate:reset": "prisma migrate reset --schema=./prisma"
-    
   },
-  "prisma": {
-    "schema": "db/schema.prisma"
+  "keywords": [
+    "prisma",
+    "sqlite",
+    "database",
+    "schema",
+    "rrhh"
+  ],
+  "peerDependencies": {
+    "@prisma/client": "^6.5.0"
   },
   "dependencies": {
     "@prisma/client": "^6.5.0"
   },
   "devDependencies": {
     "prisma": "^6.5.0"
+  },
+  "prisma": {
+    "schema": "db/schema.prisma"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 } 
