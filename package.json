@@ -10,7 +10,10 @@
     "rrhh-studio": "./scripts/studio.js",
     "rrhh-migrate": "./scripts/migrate.js",
     "rrhh-migrate-deploy": "./scripts/migrate-deploy.js",
-    "rrhh-migrate-reset": "./scripts/migrate-reset.js"
+    "rrhh-migrate-reset": "./scripts/migrate-reset.js",
+    "test-db-push": "npm run test:push",
+    "test-db-generate": "npm run test:generate",
+    "test-db-migrate": "npm run test:migrate"
   },
   "author": "",
   "license": "ISC",
